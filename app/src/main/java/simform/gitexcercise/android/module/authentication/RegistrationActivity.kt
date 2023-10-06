@@ -9,6 +9,7 @@ import com.google.android.material.snackbar.Snackbar
 import simform.gitexcercise.android.MainActivity
 import simform.gitexcercise.android.R
 import simform.gitexcercise.android.databinding.ActivityRegistrationBinding
+import simform.gitexcercise.android.module.profile.ProfileActivity
 
 class RegistrationActivity : AppCompatActivity() {
 
@@ -62,6 +63,6 @@ class RegistrationActivity : AppCompatActivity() {
                 .show()
             return
         }
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, ProfileActivity::class.java))
     }
 }

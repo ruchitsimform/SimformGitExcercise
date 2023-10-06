@@ -7,6 +7,7 @@ import androidx.core.widget.addTextChangedListener
 import simform.gitexcercise.android.MainActivity
 import simform.gitexcercise.android.R
 import simform.gitexcercise.android.databinding.ActivityLoginBinding
+import simform.gitexcercise.android.module.profile.ProfileActivity
 import simform.gitexcercise.android.utility.StrongPasswordPattern
 
 class LoginActivity : AppCompatActivity() {
