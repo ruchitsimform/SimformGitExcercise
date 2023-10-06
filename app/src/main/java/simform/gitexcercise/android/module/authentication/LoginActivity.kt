@@ -7,6 +7,7 @@ import androidx.core.widget.addTextChangedListener
 import simform.gitexcercise.android.MainActivity
 import simform.gitexcercise.android.R
 import simform.gitexcercise.android.databinding.ActivityLoginBinding
+import simform.gitexcercise.android.module.profile.ProfileActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -56,6 +57,6 @@ class LoginActivity : AppCompatActivity() {
             binding.tlPassword.error = getString(R.string.empty_password_error)
             return
         }
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, ProfileActivity::class.java))
     }
 }
