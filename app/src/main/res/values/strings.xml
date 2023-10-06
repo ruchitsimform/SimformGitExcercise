@@ -10,8 +10,8 @@
     <string name="reset">reset</string>
     <string name="email_address">Email Address</string>
     <string name="app_image">App Image</string>
-    <string name="name">name</string>
-    <string name="surname">surname</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
     <string name="profile">Profile</string>
     <string name="test">test</string>
     <string name="edit_profile">Edit Profile</string>
@@ -20,4 +20,7 @@
     <string name="reset_email_sent_successfully">Reset email sent successfully</string>
     <string name="password_not_matching_error">Password not matching</string>
     <string name="email_can_not_be_empty">Email can not be empty</string>
+    <string name="submit">submit</string>
+    <string name="name_can_not_be_empty">Name can not be empty</string>
+    <string name="surname_can_not_be_empty">Surname can not be empty</string>
 </resources>
