@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">GitExcercise</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="create_account">Create Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="signup">signup</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="reset">reset</string>
+    <string name="email_address">Email Address</string>
+    <string name="app_image">App Image</string>
+    <string name="name">name</string>
+    <string name="surname">surname</string>
+    <string name="profile">Profile</string>
+    <string name="test">test</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="empty_password_error">Password can not be empty</string>
+    <string name="empty_username_error">Username can not be empty</string>
+    <string name="reset_email_sent_successfully">Reset email sent successfully</string>
+    <string name="password_not_matching_error">Password not matching</string>
+    <string name="email_can_not_be_empty">Email can not be empty</string>
 </resources>
