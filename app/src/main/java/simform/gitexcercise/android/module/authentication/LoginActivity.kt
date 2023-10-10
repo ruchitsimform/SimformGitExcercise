@@ -7,6 +7,8 @@ import androidx.core.widget.addTextChangedListener
 import simform.gitexcercise.android.MainActivity
 import simform.gitexcercise.android.R
 import simform.gitexcercise.android.databinding.ActivityLoginBinding
+import simform.gitexcercise.android.module.profile.ProfileActivity
+import simform.gitexcercise.android.utility.StrongPasswordPattern
 
 class LoginActivity : AppCompatActivity() {
 
@@ -56,6 +58,59 @@ class LoginActivity : AppCompatActivity() {
             binding.tlPassword.error = getString(R.string.empty_password_error)
             return
         }
-        startActivity(Intent(this, MainActivity::class.java))
+        when (isPasswordStrong(binding.etPassword.text.toString())) {
+            PasswordError.Number -> {
+                binding.tlPassword.isErrorEnabled = true
+                binding.tlPassword.error =
+                    getString(R.string.password_must_contains_at_least_1_number)
+            }
+
+            PasswordError.SmallAlphabet -> {
+                binding.tlPassword.isErrorEnabled = true
+                binding.tlPassword.error =
+                    getString(R.string.password_must_contains_at_least_1_small_alphabet)
+            }
+
+            PasswordError.CapitalAlphabet -> {
+                binding.tlPassword.isErrorEnabled = true
+                binding.tlPassword.error =
+                    getString(R.string.password_must_contains_at_least_1_capital_alphabet)
+            }
+
+            PasswordError.SpecialCharacter -> {
+                binding.tlPassword.isErrorEnabled = true
+                binding.tlPassword.error =
+                    getString(R.string.password_must_contains_at_least_1_special_character)
+            }
+
+            PasswordError.Length -> {
+                binding.tlPassword.isErrorEnabled = true
+                binding.tlPassword.error = getString(R.string.password_length_must_be_8_to_20)
+            }
+
+            PasswordError.None -> {
+                startActivity(Intent(this, MainActivity::class.java))
+            }
+        }
+    }
+
+    private fun isPasswordStrong(password: String): PasswordError {
+        return if (!StrongPasswordPattern.NUMBER.toRegex().containsMatchIn(password)) {
+            PasswordError.Number
+        } else if (!StrongPasswordPattern.SMALL_ALPHABET.toRegex().containsMatchIn(password)) {
+            PasswordError.SmallAlphabet
+        } else if (!StrongPasswordPattern.CAPITAL_ALPHABET.toRegex().containsMatchIn(password)) {
+            PasswordError.CapitalAlphabet
+        } else if (!StrongPasswordPattern.SPECIAL_CHARACTER.toRegex().containsMatchIn(password)) {
+            PasswordError.SpecialCharacter
+        } else if (!StrongPasswordPattern.LENGTH.toRegex().containsMatchIn(password)) {
+            PasswordError.Length
+        } else {
+            PasswordError.None
+        }
+    }
+
+    enum class PasswordError {
+        Number, SmallAlphabet, CapitalAlphabet, Length, SpecialCharacter, None
     }
 }

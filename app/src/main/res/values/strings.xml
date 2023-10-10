@@ -20,4 +20,10 @@
     <string name="reset_email_sent_successfully">Reset email sent successfully</string>
     <string name="password_not_matching_error">Password not matching</string>
     <string name="email_can_not_be_empty">Email can not be empty</string>
+    <string name="please_enter_strong_password">Please enter strong password.</string>
+    <string name="password_must_contains_at_least_1_number">Password must contains at least 1 number</string>
+    <string name="password_must_contains_at_least_1_small_alphabet">Password must contains at least 1 small alphabet</string>
+    <string name="password_must_contains_at_least_1_capital_alphabet">Password must contains at least 1 capital alphabet</string>
+    <string name="password_must_contains_at_least_1_special_character">Password must contains at least 1 special character</string>
+    <string name="password_length_must_be_8_to_20">Password length must be 8 to 20</string>
 </resources>
